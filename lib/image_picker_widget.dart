@@ -88,9 +88,10 @@ class ImagePickerWidget extends StatefulWidget {
       _ImagePickerWidgetState(this.initialImage);
 
   static Future<ImageSource?> selectSourceModal(BuildContext context,
-      {ModalOptions? options}) async {
+      {ModalOptions? options, modalBottomSheetOptions}) async {
     return showModalBottomSheet<ImageSource?>(
       context: context,
+      useSafeArea: true,
       builder: (context) => ModalImageSelector(options),
     );
   }

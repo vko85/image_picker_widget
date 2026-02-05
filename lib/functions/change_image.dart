@@ -11,7 +11,7 @@ ImagePickerOptions? imagePickerOptions) async {
     type = ImageSource.gallery;
   } else {
     type = await showModalBottomSheet<ImageSource?>(
-      context: context, builder: (context) => modal);
+      context: context, useSafeArea: true, builder: (context) => modal);
   }
   if (type != null) {
     imagePickerOptions ??= ImagePickerOptions();
