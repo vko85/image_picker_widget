@@ -6,17 +6,7 @@ class ModalImageSelector extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BottomSheet(
-        onClosing: () {
-          return null;
-        },
-        shape: const RoundedRectangleBorder(
-          borderRadius: BorderRadius.only(
-            topLeft: Radius.circular(12),
-            topRight: Radius.circular(12),
-          ),
-        ),
-        builder: (_) => Container(
+    return SafeArea(child:Container(
               padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 12),
               width: MediaQuery.of(context).size.width,
               decoration: const BoxDecoration(
